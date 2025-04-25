@@ -1,0 +1,243 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Updated styles for unique and modern design */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f3f4f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #1e3a8a;
+  font-size: 2.5rem;
+}
+
+section {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+
+sia-button {
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+
+sia-button button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button Variants */
+sia-button button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Primary Button */
+sia-button.primary button {
+  background-color: #00ab2b;
+  color: white;
+  border-color: #2563eb;
+}
+sia-button.primary button:hover {
+  background-color: #1e40af;
+}
+sia-button.primary button:active {
+  background-color: #1e3a8a;
+}
+sia-button.primary button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+sia-button.primary button.error {
+  background-color: #dc2626;
+  border-color: #b91c1c;
+}
+
+/* Secondary Button */
+sia-button.secondary button {
+  background-color: #3B7FD2;
+  color: white;
+  border-color: #3B7FD2;
+}
+sia-button.secondary button:hover {
+  background-color: #2A5FA0;
+}
+sia-button.secondary button:active {
+  background-color: #204A7A;
+}
+sia-button.secondary button:disabled {
+  background-color: #A9D1F5;
+  cursor: not-allowed;
+}
+
+/* Tertiary Button */
+sia-button.tertiary button {
+  background-color: transparent;
+  color: #2563eb;
+  border-color: transparent;
+}
+sia-button.tertiary button:hover {
+  background-color: #e0f2fe;
+}
+sia-button.tertiary button:active {
+  background-color: #bfdbfe;
+}
+sia-button.tertiary button:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+sia-button.tertiary button.error {
+  color: #dc2626;
+}
+
+/* Ghost Button */
+sia-button.ghost button {
+  background-color: transparent;
+  color: #6b7280;
+  border-color: transparent;
+}
+sia-button.ghost button:hover {
+  background-color: #f3f4f6;
+}
+sia-button.ghost button:active {
+  background-color: #e5e7eb;
+}
+sia-button.ghost button:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+sia-button.ghost button.error {
+  color: #dc2626;
+}
+
+sia-button button:hover {
+  background-color: #1e40af;
+}
+
+sia-table {
+  display: block;
+  margin: 15px 0;
+}
+
+sia-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+sia-table th, sia-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+sia-table th {
+  background-color: #2563eb;
+  color: white;
+}
+
+sia-textinput {
+  display: block;
+  margin: 15px 0;
+}
+
+sia-textinput input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+sia-dropdown {
+  display: block;
+  margin: 15px 0;
+}
+
+sia-dropdown select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+sia-radio {
+  display: block;
+  margin: 15px 0;
+}
+
+sia-radio label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+sia-checkbox {
+  display: block;
+  margin: 15px 0;
+}
+
+sia-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
