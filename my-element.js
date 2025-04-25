@@ -215,6 +215,68 @@ class SiaTable extends LitElement {
   }
 }
 
+class SiaTableAlternate extends LitElement {
+  static styles = css`
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background-color: #002569;
+      color: #FFFFFF;
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5em;
+      padding: 8px 8px;
+      width: 160px;
+      height: 32px;
+      text-align: left;
+    }
+
+    td {
+      background-color: #FFFFFF;
+      color: #121212;
+      font-family: 'Proxima Nova', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5em;
+      padding: 4px;
+      width: 160px;
+      height: 32px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f3f4f6;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #ffffff;
+    }
+  `;
+
+  render() {
+    return html`
+      <table>
+        <thead>
+          <tr>
+            ${Array(6).fill().map(() => html`<th>Header</th>`)}
+          </tr>
+        </thead>
+        <tbody>
+          ${Array(10).fill().map(() => html`
+            <tr>
+              ${Array(6).fill().map(() => html`<td>Cell</td>`)}
+            </tr>
+          `)}
+        </tbody>
+      </table>
+    `;
+  }
+}
+
 class SiaTextInput extends LitElement {
   static styles = css`
     .form-md {
@@ -632,6 +694,7 @@ customElements.define('sia-card', SiaCard);
 customElements.define('sia-chip', SiaChip);
 customElements.define('sia-button', SiaButton);
 customElements.define('sia-table', SiaTable);
+customElements.define('sia-table-alternate', SiaTableAlternate);
 customElements.define('sia-textinput', SiaTextInput);
 customElements.define('sia-dropdown', SiaDropdown);
 customElements.define('sia-radio', SiaRadio);
